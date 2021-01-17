@@ -601,7 +601,7 @@ ul, ol {
     background-image: linear-gradient(to bottom, #fff 40%, #A5A5A5 40%);
     background-size: 2px 35px;
     background-repeat: repeat-y;
-    background-position: left 12px top 25px;
+    background-position: left 12px top -4px;
 }
 
 .benefits-list:before,
@@ -622,12 +622,12 @@ ul, ol {
 
 .benefits-list:before {
     background-image: url(../images/pin-start.svg);
-    top: -10px;
+    top: -5px;
 }
 
 .benefits-list:after {
     background-image: url(../images/pin-end.svg);
-    bottom: -20px;
+    bottom: -4px;
 }
 
 
@@ -1213,6 +1213,39 @@ ul, ol {
         position: static;
     }
 
+/* Benefits */
+    .benefits {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .benefits__col {
+        width: 100%;
+    }
+
+    .benefits-list {
+        margin-bottom: 30px;
+        max-width: none;
+    }
+
+/* Team */
+    .team {
+        flex-direction: column;
+    }
+
+    .team__col {
+        width: 100%;
+    }
+
+    .team__col:last-child {
+        margin-bottom: 0;
+    }
+
+    .team__item {
+        max-width: 370px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 575px) {
