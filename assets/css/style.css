@@ -4,9 +4,11 @@ body {
     background-color: #fff;
 
     font-family: 'PT Sans', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.4;
     color: #585858;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: greyscale;
 }
 
 body.no-scrol {
@@ -88,7 +90,7 @@ ul, ol {
 .nav {
     display: flex;
     height: 100%;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .nav__link {
@@ -149,7 +151,7 @@ ul, ol {
 }
 
 .intro__countries {
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -212,7 +214,7 @@ ul, ol {
 }
 
 .request-form__text {
-    font-size: 15px;
+    font-size: 16px;
     color: #fff;
 }
 
@@ -435,7 +437,7 @@ ul, ol {
 .services__text {
     margin-bottom: 20px;
 
-    font-size: 15px;
+    font-size: 16px;
     color: #585858;
 }
 
@@ -564,7 +566,7 @@ ul, ol {
 }
 
 .reviews__company {
-    font-size: 15px;
+    font-size: 16px;
     color: #2C2C2C;
 }
 
@@ -646,7 +648,7 @@ ul, ol {
 }
 
 .benefits-list__text {
-    font-size: 15px;
+    font-size: 16px;
     color: #585858;
 }
 
@@ -683,7 +685,7 @@ ul, ol {
 .team__prof {
     margin-bottom: 11px;
 
-    font-size: 15px;
+    font-size: 16px;
     color: #585858;
 }
 
@@ -784,12 +786,18 @@ ul, ol {
 
 .atcicle--column {
     flex-direction: column;
+    margin-bottom: 75px;
 }
 
 .atcicle--column
 .article__item {
     max-width: none;
     margin-bottom: 45px;
+}
+
+.atcicle--column
+.article__item:last-child {
+    margin-bottom: 0;
 }
 
 
@@ -803,7 +811,7 @@ ul, ol {
 .article__title {
     margin-bottom: 15px;
 
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 700;
     color: #2C2C2C;
 }
@@ -821,7 +829,7 @@ ul, ol {
 .article__text {
     margin-bottom: 15px;
 
-    font-size: 15px;
+    font-size: 16px;
     color: #585858;
 }
 
@@ -891,11 +899,12 @@ ul, ol {
 
 .modal {
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*    display: block;*/
     width: 100%;
     height: 100%;
+    padding: 30px 15px;
+    overflow-y: auto;
+
     background-color: rgba(0, 0, 0, .9);
 
     position: fixed;
@@ -909,7 +918,15 @@ ul, ol {
 }
 
 .modal__inner {
-    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+.modal__content {
+    width: 100%;
+    max-width: 400px;
     padding: 25px;
     position: relative;
 
@@ -938,7 +955,7 @@ ul, ol {
 }
 
 .modal__text {
-    font-size: 15px;
+    font-size: 16px;
     color: #2C2C2C;
 }
 
@@ -960,7 +977,7 @@ ul, ol {
 }
 
 .modal__footer-contacts {
-    font-size: 15px;
+    font-size: 14px;
     color: #2C2C2C;
     font-size: normal;
 }
@@ -1007,10 +1024,12 @@ ul, ol {
 
 .main {
     display: flex;
+    margin: 0 -15px;
 }
 
 .main__col {
     width: 50%;
+    padding: 0 15px;
 }
 
 /* Text */
@@ -1057,7 +1076,7 @@ ul, ol {
 }
 
 .text h6 {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .text ul,
@@ -1115,6 +1134,10 @@ ul, ol {
         transform: translate3d(-50%, -50%, 0)
     }
 
+    .intro--blog, intro__text {
+        height: 250px;
+    }
+
 /* Section */
     .section__title {
         text-align: center;
@@ -1157,6 +1180,16 @@ ul, ol {
         background-size: 330px auto;
         background-position: left -30px bottom -30px, right -30px bottom -30px;
     }
+
+/* Main */
+    .main__col--left {
+        width: 55%;
+    }
+
+    .main__col--right {
+        width: 45%;
+    }
+
 
 }
 
@@ -1290,10 +1323,30 @@ ul, ol {
         max-width: none;
     }
 
-    /* Footer */
+/* Footer */
     .footer {
         background-size: 250px auto;
         background-position: left -20px bottom -30px, right -20px bottom -30px;
+    }
+
+/* Main */
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main__col {
+        width: 100%;
+    }
+
+/* Request-form */
+    .request-form--right {
+        display: none;
+    }
+
+/* Article */
+    .atcicle--column {
+        margin-bottom: 30px;
     }
 
 
@@ -1390,6 +1443,14 @@ ul, ol {
     .footer {
         background-position: left -120px bottom -80px, right -120px bottom -80px;
     }
+
+/* Modal */
+
+    .modal__close {
+        right: 0;
+        top: -30px;
+    }
+
 
 }
 
