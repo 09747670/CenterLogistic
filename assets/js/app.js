@@ -5,6 +5,9 @@ $(function() {
     let introH = intro.innerHeight();
     let headerH = header.innerHeight();
 
+
+/*_______________Header scroll____________________ */
+
     headerScroll();
 
     $(window).on("scroll resize", function(){
@@ -26,6 +29,20 @@ $(function() {
         }
     }
 
+/*_______________Smooth scrol to section____________________ */
+
+
+    $("[data-scroll]").on("click", function(event) {
+        event.preventDefault();
+
+        let scrollEl = $(this).data("scroll");
+        let scrollElPos = $(scrollEl).offset().top;
+
+        $("html, body").animate({
+           scrollTop:  scrollElPos - headerH
+        }, 500)
+
+    })
 
 
 })
