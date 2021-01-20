@@ -127,9 +127,10 @@ ul, ol {
 /* Intro */
 
 .intro {
+    position: relative;
     margin-bottom: 30px;
 
-    background: #000 url("../images/intro bg.jpg") no-repeat center / cover;
+    background: #000;
 }
 
 .intro--blog {
@@ -142,12 +143,76 @@ ul, ol {
     background: #000 url("../images/text-bg.jpg") no-repeat center / cover;
 }
 
+.intro__slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.intro__slider .slick-list,
+.intro__slider .slick-track {
+    height: 100%;
+}
+
+
+.intro__slider-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.intro__slider-arrows {
+    position: absolute;
+    bottom: 30px;
+    left: 430px;
+}
+
+.intro__slider-btn {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0 4px;
+
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+
+    background: none;
+}
+
+.intro__slider-btn:focus {
+    outline: none;
+}
+
+.intro__slider--prev {
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+.intro__slider--next {
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #fff;
+}
+
+
 .intro__inner {
     height: 600px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    position: relative;
+    z-index: 2;
 }
+
 
 .intro__text {
     text-align: right;
