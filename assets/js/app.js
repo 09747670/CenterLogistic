@@ -126,7 +126,7 @@ $(function() {
     }
 
 
- /*_______________Slick slider____________________ */
+ /*_______________Intro slider____________________ */
 
     let introSlider = $('#introSlider');
 
@@ -137,7 +137,8 @@ $(function() {
         arrows: false,
         fade: true,
         autoplay: true,
-        autoplaySpeed: 4000
+        autoplaySpeed: 4000,
+        speed: 500
     });
 
     $('#introSliderPrev').on('click', function(){
@@ -146,6 +147,20 @@ $(function() {
 
      $('#introSliderNext').on('click', function(){
         introSlider.slick('slickNext');
+    });
+
+/*_______________Reviews Slider____________________ */
+
+    let reviewsSlider = $('#reviewsSlider');
+
+    reviewsSlider.slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+//        fade: true,
+        speed: 500
     });
 
 });
