@@ -212,7 +212,7 @@ body.show-nav .header{
     height: 100%;
     overflow: hidden;
 
-    background: #04222a url("../images/intro bg.jpg") no-repeat center / cover;
+    background: #04222a url("../images/slider/slide-1.jpg") no-repeat center / cover;
 
     position: absolute;
     top: 0;
@@ -1378,6 +1378,10 @@ body.show-nav .header{
         height: 250px;
     }
 
+    .intro__slider-arrows {
+        display: none;
+    }
+
 /* Section */
     .section__title {
         text-align: center;
@@ -1443,8 +1447,8 @@ body.show-nav .header{
 /* Nav */
     .nav {
         width: 100%;
-        height: auto;
-        min-height: calc(100vh - 50px);
+        height: calc(100vh - 50px);
+        overflow: auto;
         padding-top: 9px;
         flex-direction: column;
 
@@ -1477,8 +1481,6 @@ body.show-nav .header{
 /* Intro */
     .intro {
         margin-bottom: 0;
-
-        background: #04222a;
     }
 
     .intro__inner {
@@ -1502,10 +1504,6 @@ body.show-nav .header{
 
     .intro__titile-amp {
         font-size: 100px;
-    }
-
-    .intro__slider-arrows {
-        display: none;
     }
 
 /* Request form */

@@ -183,7 +183,8 @@ $(function() {
         slidesToScroll: 1,
         arrows: false,
         dots: true,
-//        fade: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         speed: 500
     });
 
