@@ -115,7 +115,7 @@ $(function() {
                 transform: 'scale(1)',
                 opacity: '1'
             });
-        });
+        }, 200);
     });
 
 
